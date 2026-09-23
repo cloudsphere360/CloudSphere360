@@ -1,3 +1,5 @@
+@Library('jenkins-shared-library') _
+
 pipeline {
     agent {
         label 'Jenkins Server Agent-1'
@@ -5,13 +7,13 @@ pipeline {
 
     stages {
 
-        stage('Checkout CloudSphere360 Source Code') {
+        stage('Checkout CloudSphere360 Repository') {
             steps {
                 checkout scm
             }
         }
 
-        stage {
+        stage('Maven Compile & Build Project') {
             steps {
                 buildWithMaven()
             }
