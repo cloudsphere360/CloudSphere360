@@ -1,39 +1,29 @@
-# CloudSphere360 Portfolio
+# CloudSphere360
 
-A Java + Maven portfolio website starter project for CI/CD practice.
+CloudSphere360 is a DevOps project demonstrating a modern CI/CD and GitOps-based application deployment workflow.
 
-## Goals
-- Personal portfolio
-- Blog
-- Projects
-- Contact/business presence
-- Java + Maven CI practice
+## CI/CD Architecture
 
-## Current phase
-Phase 1 focuses on Java + Maven + tests and a simple runnable web application.
-CI/CD files such as Jenkinsfile are intentionally NOT included so you can build the pipeline from scratch.
+<p align="center">
+  <img src="./docs/architecture/ci-cd-architecture.png"
+       alt="CloudSphere360 CI/CD Architecture"
+       width="100%">
+</p>
 
-## Prerequisites
-- JDK 21+
-- Maven 3.9+
-- Git
+### Architecture Overview
 
-## Build
-```bash
-mvn clean package
-```
+The project follows a CI/CD and GitOps-based approach:
 
-## Run
-```bash
-mvn spring-boot:run
-```
+- **GitHub** – Source code management
+- **Jenkins** – Continuous Integration and build automation
+- **Maven** – Java application build
+- **Docker** – Application containerization
+- **Docker Hub** – Container image registry
+- **GitOps Repository** – Kubernetes deployment configuration
+- **Argo CD** – Continuous Deployment
+- **AWS EKS / Kubernetes** – Application runtime
 
-Open http://localhost:8080
+### CI Flow
 
-## Project structure
-- `src/main/java` - application code
-- `src/main/resources` - templates/static resources
-- `src/test/java` - tests
-- `pom.xml` - Maven configuration
-
-Later phases can add Docker, Jenkins, security scanning, registry, deployment GitOps, and Kubernetes.
+```text
+Developer → GitHub → Jenkins → Maven → Docker Build → Docker Hub
