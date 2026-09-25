@@ -27,3 +27,8 @@ The project follows a CI/CD and GitOps-based approach:
 
 ```text
 Developer → GitHub → Jenkins → Maven → Docker Build → Docker Hub
+
+### CD Flow
+
+```text
+Docker Hub → GitOps Repository → Argo CD → AWS EKS / Kubernetes
