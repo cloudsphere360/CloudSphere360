@@ -5,7 +5,7 @@ CloudSphere360 is a DevOps project demonstrating a modern CI/CD and GitOps-based
 ## CI/CD Architecture
 
 <p align="center">
-  <img src="./docs/architecture/ci-cd-architecture.png"
+  <img src="./docs/architecture/ci-cd-architecture.gif"
        alt="CloudSphere360 CI/CD Architecture"
        width="100%">
 </p>
